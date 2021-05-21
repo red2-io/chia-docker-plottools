@@ -8,3 +8,9 @@ services:
       harvester: "true"
     volumes: 
     - ./plotman.yaml:/root/.config/plotman/plotman.yaml
+      - /mnt/nvme/ssd1:/mnt/tmp/00
+      - /mnt/nvme/ssd2:/mnt/tmp/01
+      - /mnt/nvme/ssd3:/mnt/tmp/02
+      - /mnt/nvme/ssd4:/mnt/tmp/03
+      - /mnt/hdd/hdd1:/mnt/dst/00
+      - /mnt/hdd/hdd2:/mnt/dst/01
