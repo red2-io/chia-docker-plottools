@@ -5,9 +5,14 @@ services:
     build: .
     image: chia-docker-plottools:local
     environment:
+      TZ: America/New_York
       harvester: "true"
+      farmer_address: 127.0.0.1
+      farmer_port: 8447
+      #keys: /root/.chia/mnemonic.txt
     volumes: 
-    - ./plotman.yaml:/root/.config/plotman/plotman.yaml
+      #- ./mnemonic.txt:/root/.chia/mnemonic.txt
+      - ./plotman.yaml:/root/.config/plotman/plotman.yaml
       - /mnt/nvme/ssd1:/mnt/tmp/00
       - /mnt/nvme/ssd2:/mnt/tmp/01
       - /mnt/nvme/ssd3:/mnt/tmp/02
