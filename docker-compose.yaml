@@ -1,0 +1,10 @@
+version: "3.9"
+services:
+  chia-harvester:
+    container_name: chia-plottools
+    build: .
+    image: chia-docker-plottools:local
+    environment:
+      harvester: "true"
+    volumes: 
+    - ./plotman.yaml:/root/.config/plotman/plotman.yaml
